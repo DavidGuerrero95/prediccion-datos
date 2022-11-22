@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.5</version>
+        <version>2.5.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>app.prediccion</groupId>
@@ -15,9 +15,17 @@
     <description>prediccion-datos</description>
     <properties>
         <java.version>11</java.version>
-        <spring-cloud.version>2021.0.5</spring-cloud.version>
+        <spring-cloud.version>2020.0.4</spring-cloud.version>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -25,6 +33,10 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
         <dependency>
@@ -42,6 +54,19 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-rest</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
         </dependency>
     </dependencies>
     <dependencyManagement>
